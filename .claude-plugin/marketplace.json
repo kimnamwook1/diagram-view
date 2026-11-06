@@ -1,0 +1,13 @@
+{
+  "name": "diagram-view",
+  "owner": {
+    "name": "kimnamwook1"
+  },
+  "plugins": [
+    {
+      "name": "diagram-view",
+      "source": "./"
+    }
+  ],
+  "description": "Draws diagrams, charts, math, HTML, images and GIFs in Claude Code replies as pictures in the terminal"
+}

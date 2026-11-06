@@ -1,0 +1,10 @@
+{
+  "name": "diagram-view",
+  "version": "0.2.0",
+  "description": "Draws diagrams, charts, math, HTML, images and GIFs in Claude Code replies as pictures in the terminal",
+  "author": {
+    "name": "kimnamwook1"
+  },
+  "repository": "https://github.com/kimnamwook1/diagram-view",
+  "license": "MIT"
+}
