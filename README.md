@@ -56,6 +56,8 @@ Pictures need the kitty graphics protocol with Unicode placeholders: kitty, Ghos
 - It adds one short section to the system prompt, listing the blocks it draws.
 - It changes no settings and no permissions.
 
+See [PRIVACY.md](PRIVACY.md).
+
 ## Safety
 
 Pictures are made from text the model wrote, so no renderer may reach the network: a remote image in a diagram could otherwise carry data out. HTML draws with scripts off; every Chrome page is offline on `about:blank`, away from local files too. Mermaid runs behind a dead proxy, D2 does not bundle remote icons, PlantUML runs under its `SANDBOX` profile and ffmpeg reads local files only. Math and charts run only the bundled libraries.
