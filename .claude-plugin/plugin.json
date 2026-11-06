@@ -1,6 +1,6 @@
 {
   "name": "diagram-view",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Draws diagrams, charts, math, HTML, images and GIFs in Claude Code replies as pictures in the terminal",
   "author": {
     "name": "kimnamwook1"

@@ -47,6 +47,15 @@ Pictures need the kitty graphics protocol with Unicode placeholders: kitty, Ghos
 - Pictures are cached in the system temp folder under `diagram-view`.
 - A plain ` ```html ` block stays code. Only ` ```html render ` draws.
 
+## What this mod runs and writes
+
+- It sends nothing anywhere and has no server of its own. It reads no credentials.
+- For each block it runs `node renderer/render.mjs`, which starts the local tool in the table above: mermaid-cli, resvg, Graphviz, D2, PlantUML, ffmpeg or headless Chrome. It runs each with arguments, never through a shell.
+- It reads the local images and videos a reply names, to draw them.
+- It writes block sources and pictures to `diagram-view` in the system temp folder. Chrome uses a throwaway profile that is removed after each picture.
+- It adds one short section to the system prompt, listing the blocks it draws.
+- It changes no settings and no permissions.
+
 ## Safety
 
 Pictures are made from text the model wrote, so no renderer may reach the network: a remote image in a diagram could otherwise carry data out. HTML draws with scripts off; every Chrome page is offline on `about:blank`, away from local files too. Mermaid runs behind a dead proxy, D2 does not bundle remote icons, PlantUML runs under its `SANDBOX` profile and ffmpeg reads local files only. Math and charts run only the bundled libraries.
@@ -60,4 +69,4 @@ Pictures are made from text the model wrote, so no renderer may reach the networ
 
 ## License
 
-MIT. `vendor/` holds KaTeX and Chart.js (MIT) and Vega and Vega-Lite (BSD-3-Clause), with their licenses beside them.
+MIT. `vendor/` holds unmodified npm releases of KaTeX and Chart.js (MIT) and Vega and Vega-Lite (BSD-3-Clause), with their licenses beside them. `vendor/README.md` lists each file's version, source and SHA-256.
